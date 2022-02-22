@@ -3,11 +3,8 @@ Lab - Git
 
 This lab explores the use of git (and GitHub) by a team. It assumes you are already familiar with the basics of git. Make sure to look at the details of assessment at the end of this file.
 
-You must first join a "group" on Canvas (details on the Assignment page for the lab). Then you will need to set up your teams. This process is described [here](JoiningTeams.md)      
-
+You must first join a "group" on Canvas (details on the Assignment page for the lab). Then you will need to set up your teams. This process is described [here](JoiningTeams.md).      
 Issues arise when multiple people use the same git repository. The exercises in the lab explore some of them. It assumes you are working in a team of 3, consisting of team members Dev1, Dev2, and Dev 3.
-
-Note: The team you work with can be your team for the rest of the course, or you may change your team for the upcoming Project. So, this will be a good opportunity to test your team (that you want to work with for the project) as well.
 
 ## Exercise 1 - Basic Git
 
@@ -16,20 +13,19 @@ below to fix faults in their own copy of the repository. The issue is then how
 to combine all of the changes into a single version on the remote repository.
 
 ***Task 1: Increment Fix***
-Fix the faulty in Counter increment(). All code changes and relevant commits must be performed on the master branch.
+Find and fix the fault in Counter increment(). All code changes and relevant commits must be performed on the master branch.
 
 ***Task 2: Decrement Fix***
-Fix the faulty in Counter decrement(). All code changes and relevant commits must be performed on the master branch.
+Find and fix the fault in Counter decrement(). All code changes and relevant commits must be performed on the master branch.
 
 ***Task 3: Reset Fix***
-Fix the faulty in Counter reset(). All code changes and relevant commits must be performed on the master branch.
+Find and fix the fault in Counter reset(). All code changes and relevant commits must be performed on the master branch.
 
 Each team member makes the change, commits it to their local repository (of
-course making meaningful commit messages!) and then attempt to push the
+course making meaningful commit messages!) and then attempts to push the
 changes to the remote repository. The first one should work without problems,
 but for the second and third, the local repositories are now out of date with
-respect to the remote repository. Note that all of this should be done on a
-the master branch. Using separate branches is in a later exercise.
+respect to the remote repository. Note that all of this should be done on the master branch. Using separate branches is for a later exercise.
 
 <ol>
   <li>Dev1,2,3 - clone the project to the local repository. Doing this
@@ -37,7 +33,7 @@ the master branch. Using separate branches is in a later exercise.
   		<ul>
   			<li>import as a project from Git</li>
   			<li>Right click on project, Configure > Convert to Maven project</li>
-  			<li>Run the project with package goal, all tests should fail</li>
+  			<li>Run the project with "package" goal, all tests should fail</li>
   		</ul>
   <li>Dev1,2,3 - performs tasks 1, 2 and 3 (below) respectively on their own local source code</li>
   <li>Dev1 - stage, commit and push the changes for task 1</li>
@@ -79,14 +75,14 @@ Note the comment about <tt>git pull...</tt>, and you can ignore the
 "fast-forwards" hint.
 
 What Dev2 and Dev3 now need to do (first one, then the other, otherwise the
-same problem will occur) is perform a 'pull to merge'. This is done by issuing
+same problem will occur) is to perform a 'pull to merge'. This is done by issuing
 a "pull" either through the IDE or command line (<tt>git pull</tt>).
 
 From Eclipse, ensure "Merge" is selected when doing the merge.
 
 ![](src/resources/pullmerge.png)
 
-From the command line when you do the command you will see something like:
+From the command line when you run this command you will see something like:
 ```
 Auto-merging filethatwaschanged.txt
 CONFLICT (content): Merge conflict in filethatwaschanged.txt
@@ -119,14 +115,14 @@ Once both Dev2 and Dev3 have resolved the conflicts this exercise is complete.
 
 ## Exercise 2 - Git Branches
 
-For this exercise, the three developers will again make three changes (this time adding features), but this time on different branches. 
+For this exercise, the three developers will again make three changes (this time adding features), but on different branches. 
 **Before starting this exercise, please make sure that all three developers pull the latest source code from the repository.**
 
-Feature 1 by Dev1 is to implement the increment method **incrementToEven()** that increases the counter to the next even number, and implement the decrement method **decrementToEven()** that decrease the counter the previous even number.
+Feature 1 by Dev1 is to implement the increment method **incrementToEven()** that increases the counter to the next even number, and implement the decrement method **decrementToEven()** that decreases the counter to the previous even number.
 
-Feature 2 by Dev2 is to implement the increment method **incrementToPrime()** that increases the counter to the next prime number, and implement the decrement method **decrementToPrime()** that decrease the counter the previous prime number.
+Feature 2 by Dev2 is to implement the increment method **incrementToPrime()** that increases the counter to the next prime number, and implement the decrement method **decrementToPrime()** that decreases the counter to the previous prime number.
 
-Feature 3 by Dev3 is to implement the **countFrequency()** method. This method count the number of words in the given sentence. Dev3 should also consider refactoring the code implemented by Dev1 and Dev2. The code refactoring should improve the overall quality of source code such as getting rid of duplicate code, apply the standard code convention, and so on.
+Feature 3 by Dev3 is to implement the **countFrequency()** method. This method counts the number of words in the given sentence. Dev3 should also consider refactoring the code implemented by Dev1 and Dev2. The code refactoring should improve the overall quality of source code such as getting rid of duplicate code, apply the standard code convention, and so on.
 
 #### Development Process
 
@@ -140,6 +136,7 @@ Each dev works on these features on three separate branches, namely feature1, fe
   <li>Dev3 - stage, commit and push changes on the feature3 branch</li>
   <li>Dev1,2,3 - create a pull request to merge from their own branch to the master branch</li>
   <li>team leader approves the pull requests</li>
+  <li>IMPORTANT: final step will be to push your code to the "submission" branch, which will trigger the CI workflow leading to you receiving an email about if your submission passed the required unit tests or not (build failed or passed). A fail message means one or more of the tests failed, and you must make further changes to your code before again committing and pushing to the "submission" branch. Detailed steps for how to create and manage the submission branch are listed in pts 1, 3 and 4 **[here](https://www.cs.auckland.ac.nz/~ewan/teaching/submission-branch.html)**. Note that pt 2 is not valid for this exercise as the submission branch is not provided to you as the part of the repo.
 </ol>
 
 #### New Branch, Build and Test
@@ -154,13 +151,13 @@ Branch.
 Once you have made the changes needed, commit them.  Make sure you are on your
 own branch before making a commit.
 
-There are three test scripts in place namely TestFeature1, TestFeature2 and TestFeature3 for testing each feature.  One feature can be tested on a branch by using the goal in maven as **-Dtest=[test script] test**. For example, **-Dtest=TestFeature1 test** is for testing feature 1.
+There are three test scripts in place namely TestFeature1, TestFeature2 and TestFeature3 for testing each feature. A feature can be tested on a branch by using the goal in maven as **-Dtest=[test script] test**. For example, **-Dtest=TestFeature1 test** is for testing feature 1.
 
-After committing the source code to a branch, Github classroom workflow (CI) will be executed. The figure below shows the log file (it also can be accessed from Github's Actions tab) after Dev1 has committed on feature1 branch; this shows testfeature1 has succeeded, while testfeature2 and testfeature3 has failed. Similarly, the execution of feature2 branch should have testfeature2 succeed, while testfeature1 and testfeature3 fails.  
+After committing the source code to a branch, Github classroom workflow (CI) will be executed. The figure below shows the log file (it also can be accessed from Github's Actions tab) after Dev1 has committed on feature1 branch; this shows testfeature1 has succeeded, while testfeature2 and testfeature3 failed. Similarly, the execution of feature2 branch should have testfeature2 succeeded, while testfeature1 and testfeature3 failed.  
 
 ![](src/resources/testrun-github.png)
 
-There are a number of tutorials available on-line. A reasonable one
+There are a number of tutorials available on-line for how to use Git branching. A reasonable one
 (although with more detail than needed for this lab) is by [Atlassian](https://www.atlassian.com/git/tutorials/using-branches)
 
 #### Pull Request ####
@@ -182,7 +179,7 @@ After that, the implementation of the feature will be added into the master bran
   
 ## Build & Run project on GitHub ##
 
-To see the result of building and running tests on Github, go do the Action tab. GitHub Action is the CI-CD (continuous integration - continuous deployment) pipeline provided by GitHub. It is similar to other CI-CD pipeline platforms, e.g. Travis CI or Jenkins. In this project, there is a workflow already defined namely Github Classroom, as shown in the figure below. Every time code is pushed to the repository, this workflow will be queued to execute automatically. When this workflow runs successfully (as shown below), the exercise is complete.
+To see the results of building and running tests on Github (using the "**submission**" branch only), go to the Action tab. GitHub Action is the CI-CD (continuous integration - continuous deployment) pipeline provided by GitHub. It is similar to other CI-CD pipeline platforms, e.g. Travis CI or Jenkins. In this project, there is a workflow already defined namely Github Classroom, as shown in the figure below. Every time code is pushed to the repository, this workflow will be queued to execute automatically. When this workflow runs successfully (as shown below), the exercise is complete.
 
 ![](src/resources/test-success.png)
 
@@ -197,13 +194,15 @@ team and a brief summary of what role each member played. For example:
 * Paramvir - Dev3 in exercise 1, Dev2 in exercise 2
 * Nick - Dev2 in exercise 1, Dev1 in exercise 1
 
-If this file is not provided then there will be a 50% penalty.
+If this file is not provided then there will be a **50% penalty**.
 
-Assessment will be performed by examining the commit logs and other
-information associated with your team repository.  You must demonstrate that
+You must enter your initial team communication via GitHub Discussions before the end of your scheduled lab timings (e.g. if the lab is scheduled Tue 2-3pm, then Tues 3pm will be your deadline). Some examples of this evidence could be: who does what, by when you plan to finish the exercises, constraints, planning notes, etc. Additionally, feel free to use GitHub Issues to report and discuss specific issues that you face while working on the exercises. If you end up using both Discussions and Issues, clearly state this in Team.md. If you fail to add any notes to Discussions before the scheduled lab closing time, **25% penalty** will be applied to the lab marks.
+
+Overall, the assessment will be performed by examining the **commit logs, Team.md, comments recorded in GitHub Discussions and other
+information associated with your team repository**. You must demonstrate that
 you have engaged with the lab material and fully participated with the
 team. This means we expect to see non-trivial commits, with meaningful commit
 messages, corresponding to each exercise. Different team members will do
 different things and different times, but we will be looking for evidence that
-there was cooperation and collaboration. Examples including making useful
-commits, and commenting on actions by other team members.
+there was team cooperation and collaboration. Examples including making useful
+commits, communications via GitHub Discussions e.g. commenting on actions by other team members, resolving conflicts, etc.
