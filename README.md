@@ -136,7 +136,7 @@ Each dev works on these features on three separate branches, namely feature1, fe
   <li>Dev3 - stage, commit and push changes on the feature3 branch</li>
   <li>Dev1,2,3 - create a pull request to merge from their own branch to the master branch</li>
   <li>team leader approves the pull requests</li>
-  <li>IMPORTANT: final step will be to push your code to the "submission" branch, which will trigger the CI workflow leading to you receiving an email about if your submission passed the required unit tests or not (build failed or passed). A fail message means one or more of the tests failed, and you must make further changes to your code before again committing and pushing to the "submission" branch. Detailed steps for how to create and manage the submission branch are listed in pts 1, 3 and 4 at https://www.cs.auckland.ac.nz/~ewan/teaching/submission-branch.html. Note that pt 2 is not valid for this exercise as the submission branch is not provided to you as the part of the repo.
+  <li>IMPORTANT: final step will be to push your code to the "submission" branch, which will trigger the CI workflow leading to you receiving an email about if your submission passed the required unit tests or not (build failed or passed). A fail message means one or more of the tests failed, and you must make further changes to your code before again committing and pushing to the "submission" branch. Detailed steps for how to create and manage the submission branch are listed in pts 1, 3 and 4 at [here](https://www.cs.auckland.ac.nz/~ewan/teaching/submission-branch.html). Note that pt 2 is not valid for this exercise as the submission branch is not provided to you as the part of the repo.
 </ol>
 
 #### New Branch, Build and Test
