@@ -1,0 +1,17 @@
+name: GitHub Workflow for auto-running tests for Week02Lab
+
+on:
+  push:
+     branches:
+       - submission
+jobs:
+  build:
+     name: Run make with target tests
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/checkout@v2
+       - uses: actions/setup-java@v1.4.3      
+       - run: mvn -B -Dit.test=TestCounter verify --file pom.xml
+       - run: mvn -B -Dit.test=TestFeature1 verify --file pom.xml
+       - run: mvn -B -Dit.test=TestFeature2 verify --file pom.xml
+       - run: mvn -B -Dit.test=TestFeature3 verify --file pom.xml
