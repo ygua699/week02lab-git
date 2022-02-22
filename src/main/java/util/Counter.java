@@ -2,7 +2,7 @@ package util;
 
 import java.util.StringTokenizer;
 
-//This is an example (faulty) class to be used for A4 Task1 and Task2
+//This is an example (faulty) class to be used for Week02Lab Exercises 1 and 2
 public class Counter {
 	public int _ctr;
 	public int _multiplier;
