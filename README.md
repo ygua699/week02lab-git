@@ -136,7 +136,7 @@ Each dev works on these features on three separate branches, namely feature1, fe
   <li>Dev3 - stage, commit and push changes on the feature3 branch</li>
   <li>Dev1,2,3 - create a pull request to merge from their own branch to the master branch</li>
   <li>team leader approves the pull requests</li>
-  <li>IMPORTANT: final step will be to push your code to the "submission" branch, which will trigger the CI workflow leading to you receiving an email about if your submission passed the required unit tests or not (build failed or passed). A fail message means one or more of the tests failed, and you must make further changes to your code before again committing and pushing to the "submission" branch. Detailed steps for how to create and manage the submission branch are listed in pts 1, 3 and 4 at [here](https://www.cs.auckland.ac.nz/~ewan/teaching/submission-branch.html). Note that pt 2 is not valid for this exercise as the submission branch is not provided to you as the part of the repo.
+  <li>IMPORTANT: The final step will be to push your code to the **"submission"** branch, which will trigger the CI workflow leading to you receiving an email about if your submission passed the required unit tests or not (build failed or passed). A fail message means one or more of the tests failed, and you must make further changes to your code before again committing and pushing to the "submission" branch. Detailed steps for how to create and manage the submission branch are listed in pts 1, 3 and 4 at [here](https://www.cs.auckland.ac.nz/~ewan/teaching/submission-branch.html). Note that pt 2 is not valid for this exercise as the submission branch is not provided to you as the part of the repo.
 </ol>
 
 #### New Branch, Build and Test
@@ -198,6 +198,7 @@ If this file is not provided then there will be a **50% penalty**.
 
 You must enter your initial team communication via GitHub Discussions before the end of your scheduled lab timings (e.g. if the lab is scheduled Tue 2-3pm, then Tues 3pm will be your deadline). Some examples of this evidence could be: who does what, by when you plan to finish the exercises, constraints, planning notes, etc. Additionally, feel free to use GitHub Issues to report and discuss specific issues that you face while working on the exercises. If you end up using both Discussions and Issues, clearly state this in Team.md. If you fail to add any notes to Discussions before the scheduled lab closing time, **25% penalty** will be applied to the lab marks.
 
+**Note that you must NOT push to the "submission" branch on remote (GitHub repo) more than 3 times**. Executing workflows incurs cost, and you must make sure you do not violate this rule while making your submissions. Violating this rule will bring penalties too.
 Overall, the assessment will be performed by examining the **commit logs, Team.md, comments recorded in GitHub Discussions and other
 information associated with your team repository**. You must demonstrate that
 you have engaged with the lab material and fully participated with the
