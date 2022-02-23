@@ -8,12 +8,6 @@ jobs:
   build:
      name: Run make with target tests
      runs-on: ubuntu-latest
-     steps:
+     steps:    
        - uses: actions/checkout@v2
-       - uses: actions/setup-java@v1.4.3  
-         with:
-              java-version: 1.8
-       - run: mvn -B -Dit.test=TestCounter verify --file pom.xml
-       - run: mvn -B -Dit.test=TestFeature1 verify --file pom.xml
-       - run: mvn -B -Dit.test=TestFeature2 verify --file pom.xml
-       - run: mvn -B -Dit.test=TestFeature3 verify --file pom.xml
+       - run: mvn -B verify
