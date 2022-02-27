@@ -6,6 +6,12 @@ This lab explores the use of git (and GitHub) by a team. It assumes you are alre
 You must first join a "group" on Canvas (details on the Assignment page for the lab). Then you will need to set up your teams. This process is described [here](JoiningTeams.md).      
 Issues arise when multiple people use the same git repository. The exercises in the lab explore some of them. It assumes you are working in a team of 3, consisting of team members Dev1, Dev2, and Dev 3.
 
+## Important note about branching
+
+**Main** - This branch is your "local" or "remote" master branch.
+**feature1, feature2 and feature3** - These branches are to be created and used once you get to Exercise 2.
+**Submission** - This branch is only for making your final submission for this lab, and must be used only after you have made all code corrections (for Exercise 1) AND implemented all specified features (for Exercise). Read carefully the instructions and rules associated with this special branch in Exercise 2 description.
+
 ## Exercise 1 - Basic Git
 
 For this exercise the three team members will individually complete the tasks
@@ -13,19 +19,19 @@ below to fix faults in their own copy of the repository. The issue is then how
 to combine all of the changes into a single version on the remote repository.
 
 ***Task 1: Increment Fix***
-Find and fix the fault in Counter increment(). All code changes and relevant commits must be performed on the master branch.
+Find and fix the fault in Counter increment(). All code changes and relevant commits must be performed on the main (another name for 'master') branch.
 
 ***Task 2: Decrement Fix***
-Find and fix the fault in Counter decrement(). All code changes and relevant commits must be performed on the master branch.
+Find and fix the fault in Counter decrement(). All code changes and relevant commits must be performed on the main branch.
 
 ***Task 3: Reset Fix***
-Find and fix the fault in Counter reset(). All code changes and relevant commits must be performed on the master branch.
+Find and fix the fault in Counter reset(). All code changes and relevant commits must be performed on the main branch.
 
 Each team member makes the change, commits it to their local repository (of
 course making meaningful commit messages!) and then attempts to push the
 changes to the remote repository. The first one should work without problems,
 but for the second and third, the local repositories are now out of date with
-respect to the remote repository. Note that all of this should be done on the master branch. Using separate branches is for a later exercise.
+respect to the remote repository. Note that all of this should be done on the main branch. **Using separate branches is for a later exercise.**
 
 <ol>
   <li>Dev1,2,3 - clone the project to the local repository. Doing this
@@ -46,13 +52,13 @@ There are four test scripts in /src/test folder. The `TestCounter` is for testin
 
 #### Continuous Integration ####
 
-In COMPSCI331 we will be using the continuous integration (CI) features of
+In COMPSCI331 we will be using the continuous integration (CI) feature of
 GitHub. Basically this means that whenever you push something to your
 repository, some tests will be run. You will receive email summarising the
-results of the tests. The results are also available on GitHub. Further
+results of the tests. The results are also available on GitHub. **Note that for this course, CI workflow tests will only execute when pushing to the "submission" branch, and that there is a restriction that you may only push to submission 3 times max for all assessments in this course. Read the Assessment section for more details.** Further
 information about CI are below and more will be provided in later labs. For
-now, just be aware that any push (even if you are not changing code) will
-cause the tests to be run and email sent to you.
+now, just be aware that any push to the "submission" branch (even if you are not changing code) will
+cause the tests to be run and email sent to you. 
 
 #### Code Synchonisation
 
@@ -126,17 +132,17 @@ Feature 3 by Dev3 is to implement the **countFrequency()** method. This method c
 
 #### Development Process
 
-Each dev works on these features on three separate branches, namely feature1, feature2 and feature3, before merging them into the master branch. The overall process is:
+Each dev works on these features on three separate branches, namely feature1, feature2 and feature3, before merging them into the main branch. The overall process is:
 
 <ol>
   <li>Dev1,2,3 - clone the project to local repository</li>
   <li>Dev1,2,3 - implement feature 1, 2 and 3 respectively locally</li>
-  <li>Dev1 - stage, commit and push changes on the feature1 branch</li>
-  <li>Dev2 - stage, commit and push changes on the feature2 branch</li>
-  <li>Dev3 - stage, commit and push changes on the feature3 branch</li>
-  <li>Dev1,2,3 - create a pull request to merge from their own branch to the master branch</li>
+  <li>Dev1 - run tests locally (Maven 'Verify'), stage, commit and push changes on the local feature1 branch</li>
+  <li>Dev2 - run tests locally (Maven 'Verify'), stage, commit and push changes on the local feature2 branch</li>
+  <li>Dev3 - run tests locally (Maven 'Verify'), stage, commit and push changes on the local feature3 branch</li>
+  <li>Dev1,2,3 - run tests locally again (just to make sure), and then create a "pull request" (GitHub) to merge from your own branch to the main branch</li>
   <li>team leader approves the pull requests</li>
-  <li>IMPORTANT: The final step will be to push your code to the **"submission"** branch, which will trigger the CI workflow leading to you receiving an email about if your submission passed the required unit tests or not (build failed or passed). A fail message means one or more of the tests failed, and you must make further changes to your code before again committing and pushing to the "submission" branch. Detailed steps for how to create and manage the submission branch are listed in pts 1, 3 and 4 at [here](https://www.cs.auckland.ac.nz/~ewan/teaching/submission-branch.html). Note that pt 2 is not valid for this exercise as the submission branch is not provided to you as the part of the repo.
+  <li>**IMPORTANT:** The final step will be to push your code to the **"submission"** branch, which will trigger the CI workflow leading to you receiving an email about if your submission passed the required unit tests or not (build failed or passed). A fail message means one or more of the tests failed, and you must make further changes to your code before again committing and pushing to the "submission" branch. Detailed steps for how to create and manage the submission branch are listed in pts 1, 3 and 4 at [here](https://www.cs.auckland.ac.nz/~ewan/teaching/submission-branch.html). Note that pt 2 is not valid for this exercise as the submission branch is not provided to you as the part of the repo.
 </ol>
 
 #### New Branch, Build and Test
@@ -151,7 +157,7 @@ Branch.
 Once you have made the changes needed, commit them.  Make sure you are on your
 own branch before making a commit.
 
-There are three test scripts in place namely TestFeature1, TestFeature2 and TestFeature3 for testing each feature. A feature can be tested on a branch by using the goal in maven as **-Dtest=[test script] test**. For example, **-Dtest=TestFeature1 test** is for testing feature 1.
+There are three test scripts in place namely TestFeature1, TestFeature2 and TestFeature3 for testing each feature. A feature can be tested on a branch by using the goal in maven as **-Dtest=[test script] test**. For example, **-Dtest=TestFeature1 test** is for testing feature 1. Note that this is only to run the tests individually locally. The CI Workflow script only runs Maven's Verify goal once for all 9 tests. See the .github/workflows/autotest.yml. **You must no tchange the contents of this file.**
 
 After committing the source code to a branch, Github classroom workflow (CI) will be executed. The figure below shows the log file (it also can be accessed from Github's Actions tab) after Dev1 has committed on feature1 branch; this shows testfeature1 has succeeded, while testfeature2 and testfeature3 failed. Similarly, the execution of feature2 branch should have testfeature2 succeeded, while testfeature1 and testfeature3 failed.  
 
@@ -162,7 +168,7 @@ There are a number of tutorials available on-line for how to use Git branching. 
 
 #### Pull Request ####
 
-The implementation of new features are separately stored on different branches. In order to combine all implementations, the branches for each feature needs to be merged into the master branch. To achieve this, each dev creates a pull requests on Github by going to Pull Request tab and click 'new pull request'. Then, select the branch to merge into master branch. Github will show the comparison of files on master branch and feature branch as the figure below.
+The implementation of new features are separately stored on different branches. In order to combine all implementations, the branches for each feature needs to be merged into the main branch. To achieve this, each dev creates a pull requests on Github by going to Pull Request tab and click 'new pull request'. Then, select the branch to merge into main branch. Github will show the comparison of files on main branch and feature branch as the figure below.
 
 ![](src/resources/pull-request1.png)
 
@@ -170,12 +176,12 @@ If there is no conflict in the files, the branches can be automatically merged. 
 
 ![](src/resources/pull-request2.png)
 
-On the approval as shown above, Github informs us that there is no conflict so we can choose to merge the pull request. However, if there is conflict as sample shown below, the conflict must be resolved before it can be merged into the master.
+On the approval as shown above, Github informs us that there is no conflict so we can choose to merge the pull request. However, if there is conflict as sample shown below, the conflict must be resolved before it can be merged into the main.
 
 ![](src/resources/pull-request3.png)
 
 
-After that, the implementation of the feature will be added into the master branch. This process must be repeated for all three features.
+After that, the implementation of the feature will be added into the main branch. This process must be repeated for all three features.
   
 ## Build & Run project on GitHub ##
 
