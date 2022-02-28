@@ -8,7 +8,7 @@ Issues arise when multiple people use the same git repository. The exercises in 
 
 ## Important note about branching
 
-**Main (some IDEs use the name "master" for main)** - This branch is your "local" or "remote" main branch.
+**Main** - This branch is your "local" or "remote" main branch. Note that GitHub used to call it "master" until 2020. So, do not get confused to see the term "master" in some of the GitHub screenshots below. On a side note, here is an interesting read about this name change: https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main
 
 **feature1, feature2 and feature3** - These branches are to be created and used once you get to Exercise 2.
 
@@ -21,7 +21,7 @@ below to fix faults in their own copy of the repository. The issue is then how
 to combine all of the changes into a single version on the remote repository.
 
 ***Task 1: Increment Fix***
-Find and fix the fault in Counter increment(). All code changes and relevant commits must be performed on the main (another name for 'main') branch.
+Find and fix the fault in Counter increment(). All code changes and relevant commits must be performed on the main branch.
 
 ***Task 2: Decrement Fix***
 Find and fix the fault in Counter decrement(). All code changes and relevant commits must be performed on the main branch.
@@ -144,7 +144,7 @@ Each dev works on these features on three separate branches, namely feature1, fe
   <li>Dev3 - run tests locally (Maven 'Verify'), stage, commit and push changes on the local feature3 branch</li>
   <li>Dev1,2,3 - run tests locally again (just to make sure), and then create a "pull request" (GitHub) to merge from your own branch to the main branch</li>
   <li>team leader approves the pull requests</li>
-  <li>**IMPORTANT:** The final step will be to push your (**ONLY one of the team members; remember this lab requires a team submission**) code to the **"submission"** branch, which will trigger the CI workflow leading to you receiving an email about if your submission passed the required unit tests or not (build failed or passed). A fail message means one or more of the tests failed, and you must make further changes to your code before again committing and pushing to the "submission" branch. Detailed steps for how to create and manage the submission branch are listed in pts 1, 3 and 4 at [here](https://www.cs.auckland.ac.nz/~ewan/teaching/submission-branch.html). Note that pt 2 is not valid for this exercise as the submission branch is not provided to you as the part of the repo.
+  <li>**IMPORTANT:** The final step will be to push your (**ONLY one of the team members; remember this lab requires a team submission**) code to the **"submission"** branch, which will trigger the CI workflow leading to you receiving an email about if your submission passed the required unit tests or not (build failed or passed). A fail message means one or more of the tests failed, and you must make further changes to your code before again committing and pushing to the "submission" branch. Detailed steps for how to create and manage the submission branch are listed in pts 1, 3 and 4 at https://www.cs.auckland.ac.nz/~ewan/teaching/submission-branch.html. Note that pt 2 is not valid for this exercise as the submission branch is not provided to you as the part of the repo.
 </ol>
 
 #### New Branch, Build and Test
@@ -159,7 +159,7 @@ Branch.
 Once you have made the changes needed, commit them.  Make sure you are on your
 own branch before making a commit.
 
-There are three test scripts in place namely TestFeature1, TestFeature2 and TestFeature3 for testing each feature. A feature can be tested on a branch by using the goal in maven as **-Dtest=[test script] test**. For example, **-Dtest=TestFeature1 test** is for testing feature 1. Note that this is only to run the tests individually locally. The CI Workflow script only runs Maven's Verify goal once for all 9 tests. See the .github/workflows/autotest.yml. **You must no tchange the contents of this file.**
+There are three test scripts in place namely TestFeature1, TestFeature2 and TestFeature3 for testing each feature. A feature can be tested on a branch by using the goal in maven as **-Dtest=[test script] test**. For example, **-Dtest=TestFeature1 test** is for testing feature 1. Note that this is only to run the tests individually locally. The CI Workflow script only runs Maven's Verify goal once for all 9 tests. See the .github/workflows/autotest.yml. **You must not change the contents of this file.**
 
 After committing the source code to a branch, Github classroom workflow (CI) will be executed. The figure below shows the log file (it also can be accessed from Github's Actions tab) after Dev1 has committed on feature1 branch; this shows testfeature1 has succeeded, while testfeature2 and testfeature3 failed. Similarly, the execution of feature2 branch should have testfeature2 succeeded, while testfeature1 and testfeature3 failed.  
 
