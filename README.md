@@ -8,8 +8,10 @@ Issues arise when multiple people use the same git repository. The exercises in 
 
 ## Important note about branching
 
-**Main** - This branch is your "local" or "remote" master branch.
+**Main/Master** - This branch is your "local" or "remote" master branch.
+
 **feature1, feature2 and feature3** - These branches are to be created and used once you get to Exercise 2.
+
 **Submission** - This branch is only for making your final submission for this lab, and must be used only after you have made all code corrections (for Exercise 1) AND implemented all specified features (for Exercise). Read carefully the instructions and rules associated with this special branch in Exercise 2 description.
 
 ## Exercise 1 - Basic Git
