@@ -8,7 +8,7 @@ Issues arise when multiple people use the same git repository. The exercises in 
 
 ## Important note about branching
 
-**Main** - This branch is your "local" or "remote" main branch.
+**Main (some IDEs use the name "master" for main)** - This branch is your "local" or "remote" main branch.
 
 **feature1, feature2 and feature3** - These branches are to be created and used once you get to Exercise 2.
 
