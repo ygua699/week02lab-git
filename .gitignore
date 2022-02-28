@@ -3,3 +3,9 @@
 /bin/
 /.settings/
 .classpath
+.idea/vcs.xml
+.idea/runConfigurations.xml
+.idea/misc.xml
+.idea/jarRepositories.xml
+.idea/encodings.xml
+.idea/compiler.xml
