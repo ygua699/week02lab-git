@@ -3,9 +3,36 @@
 /bin/
 /.settings/
 .classpath
-.idea/vcs.xml
-.idea/runConfigurations.xml
-.idea/misc.xml
-.idea/jarRepositories.xml
-.idea/encodings.xml
-.idea/compiler.xml
+out/
+
+##############################
+## IntelliJ
+##############################
+out/
+.idea/
+.idea_modules/
+*.iml
+*.ipr
+*.iws
+
+##############################
+## Eclipse
+##############################
+.settings/
+bin/
+tmp/
+.metadata
+.classpath
+.project
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.factorypath
+
+##############################
+## OS X
+##############################
+.DS_Store
