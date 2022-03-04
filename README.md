@@ -193,8 +193,8 @@ To see the results of building and running tests on Github (using the "**submiss
 
 <h2>Assessment</h2>
 
-The marking of this lab will be based on your team repository as of Friday 18
-March 1700hrs. As well as the changes made to it for the above exercises, you
+The marking of this lab will be based on your team repository as of **Friday 18
+March 1700hrs NZ time**. As well as the changes made to it for the above exercises, you
 must include a file <tt>Team.md</tt> containing the list of members in your
 team and a brief summary of what role each member played. For example:
 
@@ -204,9 +204,9 @@ team and a brief summary of what role each member played. For example:
 
 If this file is not provided then there will be a **50% penalty**.
 
-You must enter your initial team communication via GitHub Discussions before the end of your scheduled lab timings (e.g. if the lab is scheduled Tue 2-3pm, then Tues 3pm will be your deadline). Some examples of this evidence could be: who does what, by when you plan to finish the exercises, constraints, planning notes, etc. Additionally, feel free to use GitHub Issues to report and discuss specific issues that you face while working on the exercises. If you end up using both Discussions and Issues, clearly state this in Team.md. If you fail to add any notes to Discussions before the scheduled lab closing time, **25% penalty** will be applied to the lab marks.
+**You must enter your initial team communication via GitHub Discussions before Thursday, 10 Feb 17:00hrs NZ time**. Some examples of this evidence could be: who does what, by when you plan to finish the exercises, constraints, planning notes, etc. Additionally, feel free to use GitHub Issues to report and discuss specific issues that you face while working on the exercises. If you end up using both Discussions and Issues, clearly state this in Team.md. If you fail to add any notes to Discussions before the scheduled lab closing time, **25% penalty** will be applied to the lab marks.
 
-**Note that your team (one of the team members to push on behalf of the team) must NOT push to the "submission" branch on remote (GitHub repo) more than 3 times**. Executing workflows incurs cost, and you must make sure you do not violate this rule while making your submissions. Violating this rule will bring penalties too.
+**Note that your team (one of the team members to push on behalf of the team) must NOT push to the "submission" branch on remote (GitHub repo) more than 3 times**. Executing workflows incurs cost, and you must make sure you do not violate this rule while making your submissions. **Violating this rule will bring penalties too**.
 
 Overall, the assessment will be performed by examining the **commit logs, Team.md, comments recorded in GitHub Discussions and other
 information associated with your team repository**. You must demonstrate that
