@@ -218,4 +218,5 @@ there was team cooperation and collaboration. Examples including making useful
 commits, communications via GitHub Discussions e.g. commenting on actions by other team members, resolving conflicts, etc.
 
 Good Luck!
+
 ~COMPSCI331 team
