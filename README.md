@@ -187,7 +187,7 @@ After that, the implementation of the feature will be added into the main branch
   
 ## Build & Run project on GitHub ##
 
-To see the results of building and running tests on Github (using the "**submission**" branch only), go to the Action tab. GitHub Action is the CI-CD (continuous integration - continuous deployment) pipeline provided by GitHub. It is similar to other CI-CD pipeline platforms, e.g. Travis CI or Jenkins. In this project, there is a workflow already defined namely Github Classroom, as shown in the figure below. Every time code is pushed to the repository, this workflow will be queued to execute automatically. When this workflow runs successfully (as shown below), the exercise is complete.
+To see the results of building and running tests on Github (using the "**submission**" branch only), go to the Action tab. GitHub Action is the CI-CD (continuous integration - continuous deployment) pipeline provided by GitHub. It is similar to other CI-CD pipeline platforms, e.g. Travis CI or Jenkins. In this project, there is a workflow already defined namely Github Classroom, as shown in the figure below. Every time code is pushed to the repository, this workflow will be queued to execute automatically. When this workflow runs successfully (as shown below), the exercise is complete. **Caution: There is a cap (at most 3 times) on how many times you may push to the "submission" branch, so you must make sure your have tested your final code locally before pusing to this branch. 
 
 ![](src/resources/test-success.png)
 
@@ -204,11 +204,11 @@ team and a brief summary of what role each member played. For example:
 
 If this file is not provided then there will be a **50% penalty**.
 
-**You must enter your initial team communication via GitHub Discussions before Thursday, 10 Feb 17:00hrs NZ time**. Some examples of this evidence could be: who does what, by when you plan to finish the exercises, constraints, planning notes, etc. Additionally, feel free to use GitHub Issues to report and discuss specific issues that you face while working on the exercises. If you end up using both Discussions and Issues, clearly state this in Team.md. If you fail to add any notes to Discussions before the scheduled lab closing time, **25% penalty** will be applied to the lab marks.
+**You must enter your initial team communication via GitHub Discussions before Thursday, 10 Feb 17:00hrs NZ time**. Some examples of this evidence could be: who does what, by when you plan to finish the exercises, constraints, planning notes, etc. Additionally, feel free to use GitHub Issues to report and discuss specific issues that you face while working on the exercises. If you end up using both Discussions and Issues, clearly state this in Team.md. If you fail to add any notes to Discussions before the Initial Team Communication deadline, **25% penalty** will be applied to the lab marks.
 
-**Note that your team (one of the team members to push on behalf of the team) must NOT push to the "submission" branch on remote (GitHub repo) more than 3 times**. Executing workflows incurs cost, and you must make sure you do not violate this rule while making your submissions. **Violating this rule will bring penalties too**.
+**Note that your team (one of the team members to push on behalf of the team) must NOT push to the "submission" branch on remote (GitHub repo) more than 3 times**. Executing workflows incurs cost, and you must make sure you do not violate this rule while making your submissions. **Violating this rule will bring penalties too**. To be safe, never push to submission branch unless you have fully tested your final code. See details under development, building and testing code above.
 
-Overall, the assessment will be performed by examining the **commit logs, Team.md, comments recorded in GitHub Discussions and other
+Overall, the assessment will be performed by examining the **code, commit logs, Team.md, comments recorded in GitHub Discussions and other
 information associated with your team repository**. You must demonstrate that
 you have engaged with the lab material and fully participated with the
 team. This means we expect to see non-trivial commits, with meaningful commit
@@ -216,3 +216,6 @@ messages, corresponding to each exercise. Different team members will do
 different things and different times, but we will be looking for evidence that
 there was team cooperation and collaboration. Examples including making useful
 commits, communications via GitHub Discussions e.g. commenting on actions by other team members, resolving conflicts, etc.
+
+Good Luck!
+~COMPSCI331 team
